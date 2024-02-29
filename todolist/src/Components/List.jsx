@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const List = () => {
   const initialTodos = ["Code", "Sleep", "Eat"];
@@ -7,6 +7,10 @@ const List = () => {
   const [todoInput, setTodoInput] = useState("");
   const [editingTodo, setEditingTodo] = useState(false);
   const [editingTodoInput, setEditingTodoInput] = useState(null);
+
+  useEffect(() => {
+    console.log(List);
+  });
 
   return (
     <div>
